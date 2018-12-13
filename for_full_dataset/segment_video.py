@@ -11,16 +11,17 @@ import cv2
 # In[21]:
 
 
-dataset_dir = '/Users/sharingan/Documents/IEMOCAP_full_release/'
+dataset_dir = '/scratch/datasets/IEMOCAP/'
 sessions = ['Session1', 'Session2', 'Session3', 'Session4', 'Session5']
 vid_loc = '/dialog/avi/DivX/'
 
 datafile_loc = '/dialog/EmoEvaluation/'
-segment_loc = "/Users/sharingan/Documents/IEMOCAP_vid_clips/"
+segment_loc = "/scratch/users/pbhatt/IEMOCAP_vid_clips/"
 
 
 # In[46]:
 
+os.system('mkdir ' + '/scratch/users/pbhatt/IEMOCAP_vid_clips')
 
 # For each session go though each video and segment them into clips based on the time given in text filesf
 for sess in sessions:
