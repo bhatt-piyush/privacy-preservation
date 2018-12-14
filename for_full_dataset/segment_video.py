@@ -16,7 +16,7 @@ sessions = ['Session1', 'Session2', 'Session3', 'Session4', 'Session5']
 vid_loc = '/dialog/avi/DivX/'
 
 datafile_loc = '/dialog/EmoEvaluation/'
-segment_loc = "/scratch/users/pbhatt/IEMOCAP_vid_clips/"
+segment_loc = "/scratch/user/pbhatt/IEMOCAP_vid_clips/"
 
 
 # In[46]:

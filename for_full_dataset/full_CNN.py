@@ -23,7 +23,7 @@ from sklearn.utils import class_weight
 
 
 sessions = ['Session1', 'Session2', 'Session3', 'Session4', 'Session5']
-frames_loc = "/scratch/users/pbhatt/IEMOCAP_vid_frames/"
+frames_loc = "/scratch/user/pbhatt/IEMOCAP_vid_frames/"
 emotion_classes = ['ang', 'hap', 'neu'] 
 
 

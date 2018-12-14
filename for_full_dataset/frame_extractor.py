@@ -12,13 +12,13 @@ import cv2
 
 
 sessions = ['Session1', 'Session2', 'Session3', 'Session4', 'Session5']
-segment_loc = "/scratch/users/pbhatt/IEMOCAP_vid_clips/"
-frames_loc = "/scratch/users/pbhatt/IEMOCAP_vid_frames/"
+segment_loc = "/scratch/user/pbhatt/IEMOCAP_vid_clips/"
+frames_loc = "/scratch/user/pbhatt/IEMOCAP_vid_frames/"
 emotion_classes = ['ang', 'hap', 'neu']
 
 
 # In[48]:
-os.system("mkdir " + "/scratch/users/pbhatt/IEMOCAP_vid_frames")
+os.system("mkdir " + "/scratch/user/pbhatt/IEMOCAP_vid_frames")
 
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
