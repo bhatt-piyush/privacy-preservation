@@ -11,7 +11,7 @@ import cv2
 # In[21]:
 
 
-dataset_dir = '/scratch/datasets/IEMOCAP/'
+dataset_dir = '/scratch/datasets/IEMOCAP/IEMOCAP_full_release/'
 sessions = ['Session1', 'Session2', 'Session3', 'Session4', 'Session5']
 vid_loc = '/dialog/avi/DivX/'
 
@@ -21,15 +21,15 @@ segment_loc = "/scratch/user/pbhatt/IEMOCAP_vid_clips/"
 
 # In[46]:
 
-os.system('mkdir ' + '/scratch/users/pbhatt/IEMOCAP_vid_clips')
+os.system('mkdir ' + '/scratch/user/pbhatt/IEMOCAP_vid_clips')
 
 # For each session go though each video and segment them into clips based on the time given in text filesf
 for sess in sessions:
     # extract names of all videos
     vid_full_names = [x for x in os.listdir(dataset_dir + sess + vid_loc) if x[-3:] == 'avi']
     all_names = [x[:-4] for x in vid_full_names]
-    print "------------------------------------------------"
-    print sess
+    print("------------------------------------------------")
+    print(sess)
 #     print all_names
     
     # location to save the segmented video clips
@@ -44,9 +44,9 @@ for sess in sessions:
         txt_file = dataset_dir + sess + datafile_loc + txt_file_name
         out_loc = segment_loc + sess + '/' # + respective_emotion_folder
         
-        print "\nSegmentating ", vid_name
+        print("\nSegmentating ", vid_name)
         
-        with open(txt_file) as f:
+        with open(txt_file,encoding="latin-1") as f:
             data = f.readlines()
         data = iter(data)
         
@@ -64,7 +64,7 @@ for sess in sessions:
                     os.system('mkdir ' + out_loc + emotion)
 #                     print line
                     cmd = 'ffmpeg -i ' + vid_file + ' -ss ' + start_time + ' -acodec copy -to '+ end_time + ' ' + out_loc + emotion + '/' + segment_name + '.avi'
-#                     print cmd
-                    print os.system(cmd),
+#                    print cmd
+                    print(os.system(cmd))
         except(StopIteration):
             None
