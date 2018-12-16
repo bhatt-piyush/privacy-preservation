@@ -38,7 +38,7 @@ for sess in sessions:
             for vid in video_files:
                 if vid.split('_')[1][:-2] == 'script':
                     video = cv2.VideoCapture(segment_loc + sess + '/' + emo + '/' + vid)
-                    print vid, video.isOpened(),
+                    print(vid, video.isOpened(),)
                     framerate = video.get(5)
 
                     while (video.isOpened()):
@@ -61,5 +61,5 @@ for sess in sessions:
                     video.release()
                     print('-->done')
         else:
-            print "Empty"
+            print("Empty")
 
